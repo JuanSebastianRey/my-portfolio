@@ -2,3 +2,7 @@
 @forward "components";
 @forward "layout";
 @forward "util";
+
+.hidden {
+    display: none;
+}

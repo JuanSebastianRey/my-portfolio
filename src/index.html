@@ -223,36 +223,40 @@
             </div>
         </section>
 
-        <section id="contact">
-            <div class="contact container reveal">
-                <div class="contact-info">
-                    <h2 class="section-title">Get In Touch.</h2>
-                    <p class="section-paragraph">Have an exciting project where we can work together? Or just want to
-                        say
-                        hi, do send me a message and let's chat.</p>
-                </div>
-                <form class="contact-forms" name="contact" method="POST" data-netlify="true">
-                    <div class="input-box">
-                        <input type="text" name="name" autocomplete="off" spellcheck="false" required>
-                        <label>Name:</label>
-                    </div>
-
-                    <div class="input-box">
-                        <input type="text" name="email" autocomplete="off" spellcheck="false" required>
-                        <label>Email:</label>
-                    </div>
-
-                    <div class="input-box">
-                        <textarea name="message" id="" cols="30" rows="10" autocomplete="off" required></textarea>
-                        <label>Message:</label>
-                    </div>
-
-                    <div class="btn">
-                        <button type="submit" class="btn-submit">Send Message</button>
-                    </div>
-                </form>
+       <!-- Actualiza la sección del formulario -->
+<section id="contact">
+    <div class="contact container reveal">
+        <div class="contact-info">
+            <h2 class="section-title">Get In Touch.</h2>
+            <p class="section-paragraph">Have an exciting project where we can work together? Or just want to say hi, do send me a message and let's chat.</p>
+        </div>
+        <form class="contact-forms" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" onSubmit="submit">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            
+            <div class="input-box">
+                <input type="text" name="name" autocomplete="off" spellcheck="false" required>
+                <label>Name:</label>
             </div>
-        </section>
+
+            <div class="input-box">
+                <input type="email" name="email" autocomplete="off" spellcheck="false" required>
+                <label>Email:</label>
+            </div>
+
+            <div class="input-box">
+                <textarea name="message" id="" cols="30" rows="10" autocomplete="off" required></textarea>
+                <label>Message:</label>
+            </div>
+
+            <div class="btn">
+                <button type="submit" class="btn-submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
 
         <footer id="footer">
             <div class="footer">
